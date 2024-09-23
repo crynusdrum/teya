@@ -12,10 +12,7 @@ public class UserEntity {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "username")
     private String username;
-
-    @Column(name = "active")
     private boolean active;
 
 }

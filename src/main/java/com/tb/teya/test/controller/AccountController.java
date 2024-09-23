@@ -1,15 +1,12 @@
 package com.tb.teya.test.controller;
 
 import com.tb.teya.test.entity.AccountEntity;
-import com.tb.teya.test.entity.UserEntity;
 import com.tb.teya.test.service.AccountService;
-import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RequestMapping("/accounts")
 @RequiredArgsConstructor

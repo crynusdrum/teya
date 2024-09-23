@@ -12,10 +12,7 @@ public class AccountEntity {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "accountName")
     private String accountName;
-
-    @Column(name = "balance")
     private Double balance;
 
     @ManyToOne
