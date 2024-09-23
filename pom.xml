@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.tb.teya</groupId>
-	<artifactId>test</artifactId>
+	<artifactId>tiny-bank</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>test</name>
+	<name>tiny-bank</name>
 	<description>Tiny Bank Assessment 2.0</description>
 	<url/>
 	<licenses>
