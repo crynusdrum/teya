@@ -93,6 +93,24 @@ cd teya
 "description":  "description"
 }'`
 
+**Deposit - Example**
+
+`curl --location --request POST 'http://localhost:8080/bank/accounts/1/deposit?amount=100' \
+--data ''`
+
+**Withdraw - Example**
+
+`curl --location --request POST 'http://localhost:8080/bank/accounts/1/withdraw?amount=50' \
+--data ''`
+
+**Transfer between accounts - Example**
+
+`curl --location --request POST 'http://localhost:8080/bank/accounts/transfer?fromAccountId=1&toAccountId=2&amount=20'`
+
+**Transaction history - Example**
+
+`curl --location 'http://localhost:8080/bank/accounts/1/transactions'`
+
 
 
 
