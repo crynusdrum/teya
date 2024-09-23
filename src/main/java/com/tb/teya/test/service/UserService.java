@@ -14,11 +14,19 @@ public class UserService {
     private final UserRepository userRepository;
 
 
+    /**
+     * Get all users
+     * @return List<UserEntity>
+     */
     public List<UserEntity> retrieveUsers(){
-
         return userRepository.findAll();
     }
 
+    /**
+     * Create user
+     * @param userEntity UserEntity
+     * @return UserEntity
+     */
     public UserEntity userCreate(UserEntity userEntity){
 
         userEntity.setActive(true);

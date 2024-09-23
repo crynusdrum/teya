@@ -18,11 +18,21 @@ public class AccountService {
     private final UserRepository userRepository;
 
 
+    /**
+     * Get account by id
+     * @param id Long
+     * @return Optional<AccountEntity>
+     */
     public Optional<AccountEntity> getAccount(Long id) {
         return accountRepository.findById(id);
     }
 
-    // Create a new account for a user
+    /**
+     * Create a new account for a user
+     * @param userId Long
+     * @param accountName String
+     * @return AccountEntity
+     */
     public AccountEntity accountCreate(Long userId, String accountName) {
         UserEntity userEntity = userRepository.findById(userId).orElseThrow();
 
@@ -33,6 +43,10 @@ public class AccountService {
         return accountRepository.save(accountEntity);
     }
 
+    /**
+     * Get all accounts
+     * @return List<AccountEntity>
+     */
     public List<AccountEntity> retrieveAccounts(){
 
         return accountRepository.findAll();
