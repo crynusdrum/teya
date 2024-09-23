@@ -44,8 +44,8 @@ OBS:
 - It's not necessary to create anythhing because it is using a H2 memory configured with import file data.
 
 
-
-
+# How to use
+## Run the project
 ```bash
 # Github repository
 git clone https://github.com/crynusdrum/teya.git
@@ -56,6 +56,46 @@ cd teya
 # run the project
 ./mvnw spring-boot:run
 ```
+## Examples of the features - Tutorial
+
+1. Get the collection "Teya.postman_collection.json" from the project and import it to the postman
+
+**Create user - Example**
+
+`curl --location 'http://localhost:8080/users' \
+--header 'Content-Type: application/json' \
+--data '{
+"username":  "username1"
+}'`
+
+**Deactivate user - Example**
+
+`curl --location 'http://localhost:8080/users/1/status' \
+--header 'Content-Type: application/json' \
+--data '{
+"username":  "username1"
+}'`
+
+**Create account - Example**
+
+`curl --location 'http://localhost:8080/accounts/users/1?accountName=accountName1' \
+--header 'Content-Type: application/json' \
+--data '{
+"accountName":  "accountName2",
+"balance":  "200.0"
+}'`
+
+**Retrieve accounts - Example**
+
+`curl --location --request GET 'http://localhost:8080/accounts' \
+--header 'Content-Type: application/json' \
+--data '{
+"description":  "description"
+}'`
+
+
+
+
 
 
 ```
