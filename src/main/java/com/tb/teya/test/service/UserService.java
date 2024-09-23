@@ -32,4 +32,18 @@ public class UserService {
         userEntity.setActive(true);
         return userRepository.save(userEntity);
     }
+
+    //
+
+    /**
+     * Deactivate user by id
+     * @param userId Long
+     * @return UserEntity
+     */
+    public UserEntity deactivateUser(Long userId) {
+        UserEntity userFound = userRepository.findById(userId).orElseThrow();
+        userFound.setActive(false);
+
+        return userRepository.save(userFound);
+    }
 }
