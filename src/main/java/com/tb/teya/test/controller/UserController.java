@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/user")
+@RequestMapping("/users")
 @RequiredArgsConstructor
 @RestController
 public class UserController {
@@ -29,6 +29,13 @@ public class UserController {
         UserEntity userEntitySaved = userService.userCreate(userEntityRequest);
 
         return ResponseEntity.ok(userEntitySaved);
+    }
+
+    @PostMapping("/{id}/status")
+    public ResponseEntity<UserEntity> deactivateUser(@PathVariable Long id) {
+        UserEntity userInactive =  userService.deactivateUser(id);
+
+        return ResponseEntity.ok(userInactive);
     }
 
 }
